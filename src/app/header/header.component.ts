@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   missionName: string = "Mars 2030";
   rocketName: string = "Plasma Max";
   editingMission: boolean = false;
+  editingRocket: boolean = false;
   
   constructor() { }
 
@@ -21,4 +22,8 @@ export class HeaderComponent implements OnInit {
     this.editingMission = false;
   }
 
+  updateRocket(updatedRocket: string) {
+    this.rocketName = updatedRocket;
+    this.editingRocket = false;
+  }
 }
