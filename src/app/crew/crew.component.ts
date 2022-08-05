@@ -19,7 +19,13 @@ export class CrewComponent implements OnInit {
   }
 
   add(memberName: string, isFirst: boolean) {
+    let crewNames = []
+    this.crew.forEach(crew=>{
+      crewNames.push(crew["name"])
+    })
+    if(!crewNames.includes(memberName)) {
     this.crew.push({name: memberName, firstMission: isFirst});
+    }
   }
 
   remove(member: object) {

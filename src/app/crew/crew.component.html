@@ -5,9 +5,7 @@
       <span *ngIf="memberBeingEdited !== member; else elseBlock">
          <!-- display state of member -->
          <span (click)="edit(member)" class="editable-text">{{member.name}}</span>
-         <span *ngIf="member.firstMission">
-            - 1st
-         </span>
+         <span *ngIf="member.firstMission"> - 1st </span>
          <button (click)="remove(member)">remove</button>
       </span>
 
